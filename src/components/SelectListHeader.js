@@ -67,6 +67,16 @@ class SelectListHeader extends PureComponent {
     return (
       <SelectListHeaderContainer headerTintColor={headerTintColor}>
         <SelectListHeaderContent>
+          { !disableTextSearch && (
+            <SelectListHeaderInputContainer>
+              <SelectListHeaderInput
+                placeholder={placeholder}
+                value={text}
+                onChangeText={(...args) => this.handleChangeText(...args)}
+                clearButtonMode="while-editing"
+              />
+            </SelectListHeaderInputContainer>
+          )}
           <SelectListHeaderCloseButton
             onPress={() => this.handleCloseButtonPress()}
           >
@@ -81,16 +91,6 @@ class SelectListHeader extends PureComponent {
               </SelectListHeaderCloseButtonText>
             )}
           </SelectListHeaderCloseButton>
-          { !disableTextSearch && (
-            <SelectListHeaderInputContainer>
-              <SelectListHeaderInput
-                placeholder={placeholder}
-                value={text}
-                onChangeText={(...args) => this.handleChangeText(...args)}
-                clearButtonMode="while-editing"
-              />
-            </SelectListHeaderInputContainer>
-          )}
         </SelectListHeaderContent>
       </SelectListHeaderContainer>
     );

@@ -47,7 +47,7 @@ export const SelectListHeaderCloseButtonText = styled.Text`
 export const SelectListHeaderInputContainer = styled.View`
   flex: 1;
   height: ${SELECT_LIST_HEADER_INPUT_SIZE};
-  margin-left: 16;
+  margin-right: 16;
   flex-direction: row;
   align-items: center;
   background-color: #FFF;
