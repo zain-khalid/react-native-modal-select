@@ -31,7 +31,6 @@ export const SelectListHeaderContent = styled.View`
 `;
 
 export const SelectListHeaderCloseButton = styled.TouchableOpacity`
-  width: ${SELECT_LIST_HEADER_CLOSE_BUTTON_SIZE};
   height: ${SELECT_LIST_HEADER_CLOSE_BUTTON_SIZE};
   border-radius: 4;
   align-items: center;
